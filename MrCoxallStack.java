@@ -3,28 +3,34 @@
  * Created by: Julie Nguyen
  * Created on: Oct 2018
  * Created for: ICS4U
- * Stack file for MrCoxallStack program
+ * MrCoxallStack class
  *
  ****************************************************************************/
 
 import java.util.ArrayList;
 
-public class Stack {
+public class MrCoxallStack {
 	private static final ArrayList<Integer> stackArray = new ArrayList<Integer>();
-		
-	public void push(int value) {
-		//adds value to stack
-		stackArray.add(value);
+	private static String update = "";
+	
+	public String print() {
+		//prints entire stack
+		update = "\nStack: " + stackArray;
+		return update;
 	}
 	
-	public void pop() {
+	public String push(int value) {
+		//adds value to stack
+		stackArray.add(value);
+		update = "Value was added.";
+		return update;
+	}
+	
+	public String pop() {
 		//removes top value from stack
 		int top = stackArray.size()-1;
 		stackArray.remove(top);
-	}
-	
-	public void print() {
-		//prints entire stack
-			System.out.print(stackArray);
+		update = "Value was removed.";
+		return update;
 	}
 }
