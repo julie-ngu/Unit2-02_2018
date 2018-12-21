@@ -10,10 +10,10 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Main {
+public class Stack {
 	public static void main(String[] args) {
 		//gets input from user for stack
-		Stack userStack = new Stack();
+		MrCoxallStack userStack = new MrCoxallStack();
 		
 		System.out.print("Enter a number:\n");
 		
@@ -26,12 +26,8 @@ public class Main {
 		Scanner userInput = new Scanner(System.in);
 		int userNum = userInput.nextInt();
 				
-		userStack.push(userNum);
-		//System.out.print("Push: ");
-		//userStack.print();
-		
-		userStack.pop();
-		//System.out.print("\nPop: ");
-		//userStack.print();
+		System.out.println(userStack.push(userNum) + userStack.print());
+		System.out.println();
+		System.out.println(userStack.pop() + userStack.print());
 	}
 }
